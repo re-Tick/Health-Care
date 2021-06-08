@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Profile Cards</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/1d4badc57d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+</head>
+
+<body>
+  <div class="common-nav">
+    <a class="navbar-brand" href="/">
+      <span><img id="RGSlogo" src="/assets/RGSlogo.png" alt="Logo"></span>
+      RGS Health Care <span>/ Home</span>
+    </a>
+    <a href="/Pdashboard" id="dashboard">My Dashboard</a>
+  </div>
+
+  <section>
+    <div class="container">
+      <h1 class="heading">My Past Appointments</h1>
+      <div class="card-wrapper">
+        <div class="unrated">
+          <%if(data.length===0){%>
+            <!-- <h1>HI NICE !!</h1> -->
+            <div class="mainbox">
+              <!-- <i class="far fa-question-circle fa-spin">    -->
+              <!-- <p class="err">No results to show !!</p> -->
+              <img
+                src="https://cdn.dribbble.com/users/436620/screenshots/8386175/media/d622c2e11b1b3c139061449e426bd6ba.jpg"
+                alt="" />
+              <!-- <div class="msg">Maybe this page moved? Got deleted? Is hiding out in quarantine? Never existed in the first place?<p>Let's go <a href="#">home</a> and try from there.</p></div> -->
+            </div>
+
+            <% } else{ %>
+              <%data.forEach(function(user){%>
+                <% if(user.prescription && !user.pFlag){ %>
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1500530447821-8fccc8203b7f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fGNvcm9uYSUyMHZhY2NpbmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                      alt="card background" class="card-img">
+                    <img
+                      src="data:image/<%=user.doctorPhoto.contentType%>;base64,<%=user.doctorPhoto.data.toString('base64')%>"
+                      alt="profile-img" class="profile-img">
+                    <h1> Dr. <%=user.doctorName%>
+                    </h1>
+                    <p class="job-title">
+
+                    </p>
+                    <p class="about">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <strong>Doctor's Speciality:</strong>
+                        <span class="capitalize">
+                          <%=user.doctorSpeciality%>
+                        </span>
+                      </li>
+                      <li class="list-group-item">
+                        <strong>Address:</strong>
+                        <%=user.clinicAddress%>
+                      </li>
+
+
+                    </ul>
+                    </p>
+                    <%if(user.dFlag===1) { %>
+                      <p>Prescription given on <%=user.prescription.Pdate%>
+                      </p>
+                      <a class="btn"
+                        href="data:image/<%=user.prescription.photo.contentType%>;base64,<%=user.prescription.photo.data.toString('base64')%>"
+                        download="MyPrescription.jpg">
+                        <img
+                          src="data:image/<%=user.prescription.photo.contentType%>;base64,<%=user.prescription.photo.data.toString('base64')%>"
+                          alt="Prescription" width="104" height="142">
+                      </a>
+
+                      <%}else{%>
+                        <a class="btn" href="/Pdelete/<%= user._id %>?_method=DELETE"
+                          class="card-link">Cancel-Appointment</a>
+                        <% } %>
+                          <a href="/Pdashboard/rateDoctor/<%=user.doctorId%>/<%=user._id%>" class="btn">Rate Doctor</a>
+
+
+
+                          <!-- <ul class="social-media">
+                      <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a> </li>
+                      <li> <a href="#"> <i class="fab fa-twitter-square"></i> </a> </li>
+                      <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+                      <li> <a href="#"> <i class="fab fa-google-plus-square"></i> </a> </li>
+                    </ul> -->
+                  </div>
+                  <% } %>
+                    <% })%>
+
+        </div>
+
+        <%data.forEach(function(user){%>
+          <% if(user.prescription && user.pFlag){ %>
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1500530447821-8fccc8203b7f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fGNvcm9uYSUyMHZhY2NpbmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                alt="card background" class="card-img">
+              <img
+                src="data:image/<%=user.doctorPhoto.contentType%>;base64,<%=user.doctorPhoto.data.toString('base64')%>"
+                alt="profile-img" class="profile-img">
+              <h1> Dr. <%=user.doctorName%>
+              </h1>
+              <p class="job-title">
+
+              </p>
+              <p class="about">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <strong>Doctor's Speciality:</strong>
+                  <span class="capitalize">
+                    <%=user.doctorSpeciality%>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Address:</strong>
+                  <%=user.clinicAddress%>
+                </li>
+
+
+              </ul>
+              </p>
+              <%if(user.dFlag===1) { %>
+                <p>Prescription given on <%=user.prescription.Pdate%>
+                </p>
+                <a class="btn"
+                  href="data:image/<%=user.prescription.photo.contentType%>;base64,<%=user.prescription.photo.data.toString('base64')%>"
+                  download="MyPrescription.jpg">
+                  <img
+                    src="data:image/<%=user.prescription.photo.contentType%>;base64,<%=user.prescription.photo.data.toString('base64')%>"
+                    alt="Prescription" width="104" height="142">
+                </a>
+
+                <%}else{%>
+                  <a class="btn" href="/Pdelete/<%= user._id %>?_method=DELETE" class="card-link">Cancel-Appointment</a>
+                  <% } %>
+
+
+
+
+                    <!-- <ul class="social-media">
+                        <li> <a href="#"> <i class="fab fa-facebook-square"></i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-twitter-square"></i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-instagram"></i> </a> </li>
+                        <li> <a href="#"> <i class="fab fa-google-plus-square"></i> </a> </li>
+                      </ul> -->
+            </div>
+            <% } %>
+              <% })%>
+              <% } %>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+
+</html>

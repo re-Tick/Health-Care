@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>RGS Healthcare</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <!-- CSS Stylesheets -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- <link rel="stylesheet" href="css/styleP.css" /> -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet" />
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Font Awesome if you need it -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+
+  <link rel="stylesheet" href="css/MakeAppointment.css">
+
+  
+</head>
+
+<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+  <h3 id="heading"
+    class="text-4xl sm:text-6xl lg:text-4xl leading-none font-extrabold tracking-tight text-gray-100 mt-10 mb-8 sm:mt-14 sm:mb-10"
+    style="text-align: center;">BOOK YOUR APPOINTMENT HERE !!</h3>
+  <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+    <!--Main Col-->
+    <div id="profile"
+      class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+      <div class="p-4 md:p-12 text-center lg:text-left">
+        <!-- Image for mobile view-->
+        <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="
+              background-image: url('https://source.unsplash.com/MP0IUfwrn0A');
+            "></div>
+
+        <h1 class="text-3xl font-bold pt-8 lg:pt-0">
+          <span class="capitalize">
+            Dr <%=doctor[0].name%>
+          </span>
+        </h1>
+        <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+        <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
+          <svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
+          </svg>
+          <%=doctor[0].speciality%>
+        </p>
+        <p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+          <svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z" />
+          </svg>
+          <%=doctor[0].address%>
+        </p>
+        <p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+          <svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
+          </svg>
+          <%=doctor[0].email%>
+        </p>
+        <p class="pt-2 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+          <span class="h-4 fill-current text-green-700 pr-4">
+            Consulatation fee :
+          </span>
+          500 Rs/-
+        </p>
+
+        <p class="pt-8 text-sm">
+        <form action="/Pdashboard/makeAnAppoitment/<%= doctor[0]._id %>" method="POST">
+          <div class="input-form">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Choose a day for your Appointment</label>
+            </div>
+            <select name="day" class="custom-select" id="inputGroupSelect01">
+
+              <% if(doctor[0].clinicTiming.start.getHours()> new Date().getHours() ||
+                (doctor[0].clinicTiming.start.getHours() === new Date().getHours() &&
+                doctor[0].clinicTiming.start.getMinutes() > new Date().getMinutes()) ){ %>
+                <option value="<%=today%>">
+                  today
+                </option>
+                <% } %>
+                  <option value="<%=tom%>">
+                    <%=tom%>
+                  </option>
+                  <option value="<%=tom1%>">
+                    <%=tom1%>
+                  </option>
+                  <option value="<%=tom2%>">
+                    <%=tom2%>
+                  </option>
+                  <option value="<%=tom3%>">
+                    <%=tom3%>
+                  </option>
+                  <option value="<%=tom4%>">
+                    <%=tom4%>
+                  </option>
+                  <option value="<%=tom5%>">
+                    <%=tom5%>
+                  </option>
+            </select>
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Choose time</label>
+            </div>
+            <select name="time" class="custom-select" id="inputGroupSelect01">
+              <option value="time">
+                <%= doctor[0].clinicTiming.Start%> - <%=doctor[0].clinicTiming.End%>
+              </option>
+            </select>
+            <input type="text" name="doctorId" hidden value="<%= doctor[0]._id %>">
+            <input class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" type="submit">
+          </div>
+        </form>
+        </p>
+
+        <!-- <div class="pt-12 pb-8">
+          <form action="/sendMessage" method="post">
+            <input class='btn' type="submit" value="Send message">
+        </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <!--Img Col-->
+    <div class="w-full lg:w-2/5">
+      <!-- Big profile image for side bar (desktop) -->
+      <img src="data:image/<%=doctor[0].photo.contentType%>;base64,<%=doctor[0].photo.data.toString('base64')%>"
+        class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
+      <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
+    </div>
+
+    <!-- Pin to top right corner -->
+    <div class="absolute top-0 right-0 h-12 w-18 p-4">
+      <button class="js-change-theme focus:outline-none">🌙</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@4"></script>
+  <script src="js/MakeAppointment.js"></script>
+</body>
+
+</html>

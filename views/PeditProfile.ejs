@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/register.css" type="text/css">
+</head>
+
+<body>
+  <div class="container register">
+    <div class="row">
+
+      <div class="col-md-9 register-right">
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h3 class="register-heading">Fill your details</h3>
+            <% include ./partials/messages %>
+              <form action="/Pdashboard/Peditprofile" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="userId" value=<%=user._id%> >
+                <div class="row register-form">
+
+                  <div class="col-md-6">
+
+                    <div class="form-group">
+                      <input type="text" required class="form-control" name="name" placeholder="Enter your name *"
+                        value="<%=user.name%>"" />
+                    </div>
+                    <div class=" form-group">
+                      <input type="text" required class="form-control" name="address" placeholder="Address *"
+                        value=<%=user.address%> />
+                    </div>
+                    <div class="form-group">
+                      <input type="email" required class="form-control" name="email" placeholder="Your Email *"
+                        value=<%=user.email%> disabled />
+                    </div>
+
+                    <div class="form-group">
+                      <div class="maxl">
+                        <label class="radio inline">
+                          <input type="radio" name="sex" value=<%=user.name%> checked>
+                          <span> Male </span>
+                        </label>
+                        <label class="radio inline">
+                          <input type="radio" name="sex" value=<%=user.sex%>>
+                          <span>Female </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="date" required class="form-control" name="dateOfBirth" placeholder="Date Of Birth *"
+                        value=<%=date%> />
+                    </div>
+
+                    <div class="form-group">
+                      <input type="text" minlength="10" required maxlength="10" name="phone" class="form-control"
+                        placeholder="Your Phone *" value=<%=user.phone%> />
+                    </div>
+                    <div class="form-group">
+                      <input type="password" required class="form-control" id="password" name="password"
+                        placeholder="Password *" value=<%=user.password%> />
+                    </div>
+
+                    <div class="form-group">
+                      <input type="password" required class="form-control" id="password2" name="password2"
+                        placeholder="Confirm Password *" value=<%=user.password%> />
+                    </div>
+
+                  </div>
+
+                  <label for="photo">Want to Update you profile Pic?</label>
+                  <input  type="checkbox" name="Pcheckbox">
+
+                  <p><input class="fsize" type="file" accept="image/png,image/jpeg,image/jpg" id="file" name="photo"
+                      onchange="loadFile(event)"></p>
+                  <p><label for="file" style="cursor: pointer;"></label>
+                  </p>
+                  <p><img id="output" width="200" /></p>
+
+
+
+
+                  <div class="col-md-6">
+                    <label>Emergency Contact Details </label>
+                    <div class="form-group">
+                      <input type="text" required class="form-control" name="emergencyName" placeholder="Enter Name *"
+                        value="<%=user.emergencyContacts.name%>" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" minlength="10" required maxlength="10" name="emergencyPhone"
+                        class="form-control" placeholder="Emergency Phone Number *"
+                        value="<%=user.emergencyContacts.phone%>" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>. </label>
+                    <div class="form-group">
+                      <input type="text" required class="form-control" name="emergencyAddress"
+                        placeholder="Emergency Address *" value="<%=user.emergencyContacts.address%>" />
+                    </div>
+                    <button type="submit" class="btnRegister">Update</button>
+
+                  </div>
+                </div>
+              </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="js/PeditProfile.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,497 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  section {
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+    background-color: #fff;
+  }
+  
+  .heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+  }
+  
+  .heading::after{
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: #45e19f;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+  }
+  
+  
+  .card-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  
+  .card {
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  .card .card-img {
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
+  }
+  
+  
+  .profile-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -10rem;
+    z-index: 999;
+    border: 1rem solid #ebeef8;
+  }
+  
+  .card h1{
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+  }
+  
+  .job-title {
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  .about {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+  }
+  
+  .btn {
+    padding: 1rem 2.5rem;
+    background-color: #455ae3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+    transition: all .5s;
+  
+  }
+  
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  .social-media {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+  
+  }
+  
+  
+  .social-media i{
+    font-size: 3rem;
+    transition: color 1s;
+  }
+  
+  
+  
+  .fa-facebook-square{
+    color: #3b5999;
+  
+  }
+  
+  
+  .fa-twitter-square{
+    color: #55acee;
+    
+  }
+  
+  .fa-instagram{
+    color: #e6683c;
+    
+  }
+  
+  .fa-google-plus-square{
+    color: #dd4b39;
+    
+  }
+  
+  .fa-facebook-square:hover, .fa-google-plus-square:hover, .fa-instagram:hover, .fa-twitter-square:hover {
+    color: #45e19f;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  @media screen and (min-width: 700px) {
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .card {
+        margin: 2rem;
+        transition: transform .5s;
+    }
+  
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+  
+        to{
+            opacity: 1; 
+        }
+  
+    }
+  
+        .card:nth-child(1){
+            animation: fadeIn .5s .5s backwards;
+        }
+  
+        .card:nth-child(2){
+            animation: fadeIn .5s 1s backwards;
+        }
+  
+  
+        .card:nth-child(3){
+            animation: fadeIn .5s 1.5s backwards;
+        }
+  
+        .card:nth-child(4){
+            animation: fadeIn .5s 2s backwards;
+        }
+  
+        .card:hover {
+            transform: scale(1.05);
+        }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  section {
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+    background-color: #fff;
+  }
+
+  .heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+  }
+
+  .heading::after {
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: #45e19f;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+  }
+
+
+  .card-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+
+  }
+
+  .card .card-img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
+  }
+
+
+  .profile-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -10rem;
+    z-index: 999;
+    border: 1rem solid #ebeef8;
+  }
+
+  .card h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .job-title {
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .about {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+    color: #333;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    background-color: #455ae3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color: #eee;
+    font-size: 1.4rem;
+    transition: all .5s;
+  }
+
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, 0.3);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  .social-media {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+
+  }
+
+
+  .social-media i {
+    font-size: 3rem;
+    transition: color 1s;
+  }
+
+
+
+  .fa-facebook-square {
+    color: #3b5999;
+
+  }
+
+
+  .fa-twitter-square {
+    color: #55acee;
+
+  }
+
+  .fa-instagram {
+    color: #e6683c;
+
+  }
+
+  .fa-google-plus-square {
+    color: #dd4b39;
+
+  }
+
+  .fa-facebook-square:hover,
+  .fa-google-plus-square:hover,
+  .fa-instagram:hover,
+  .fa-twitter-square:hover {
+    color: #45e19f;
+  }
+
+  @media screen and (min-width: 700px) {
+    .card-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      margin: 2rem;
+      transition: transform .5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
+    .card:nth-child(1) {
+      animation: fadeIn .5s .5s backwards;
+    }
+
+    .card:nth-child(2) {
+      animation: fadeIn .5s 1s backwards;
+    }
+
+
+    .card:nth-child(3) {
+      animation: fadeIn .5s 1.5s backwards;
+    }
+
+    .card:nth-child(4) {
+      animation: fadeIn .5s 2s backwards;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .common-nav {
+    display: flex;
+    flex-direction: row;
+    color: #333;
+    background: #9ddfd3;
+    flex-wrap: wrap;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(90, 89, 89, 0.863);
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .common-nav a {
+    margin: 1rem;
+    text-decoration: none;
+    color: rgba(32, 31, 31, 0.856);
+  }
+
+  .common-nav a:hover {
+    color: #ebeef8;
+  }
+
+  #RGSlogo {
+    float: left;
+    justify-content: center;
+    align-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+
+  }
+
+  #dashboard {
+    font-size: 1.5rem;
+  }
+  .mainbox {
+    padding: 6rem;
+    justify-content: center;
+    /* margin: 5rem; */
+  }
+  .mainbox img {
+    width: 100%;
+    height: 100%;
+    margin: 2rem;
+    border: 1px solid rgb(129, 126, 126);
+    box-shadow: 1rem 1rem 1rem rgba(139, 128, 128, 0.856);
+    border-radius: 50%;
+  }

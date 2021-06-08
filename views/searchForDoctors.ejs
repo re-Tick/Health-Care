@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Profile Cards</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/1d4badc57d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+</head>
+
+<body>
+  <div class="common-nav">
+    <a class="navbar-brand" href="/">
+      <span><img id="RGSlogo" src="/assets/RGSlogo.png" alt="Logo"></span>
+      RGS Health Care <span>/ Home</span>
+    </a>
+    <a href="/Pdashboard" id="dashboard">My Dashboard</a>
+  </div>
+  <%if(data.length===0){%>
+    <div class="mainbox">
+
+      <img src="https://cdn.dribbble.com/users/436620/screenshots/8386175/media/d622c2e11b1b3c139061449e426bd6ba.jpg"
+        alt="" />
+
+    </div>
+    <%}else{%>
+
+      <%data.forEach(function(user){%>
+
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1500530447821-8fccc8203b7f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fGNvcm9uYSUyMHZhY2NpbmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt="card background" class="card-img">
+          <img src="data:image/<%=user.photo.contentType%>;base64,<%=user.photo.data.toString('base64')%>"
+            alt="profile-img" class="profile-img">
+          <h1 class="name">Dr.<%=user.name%>
+          </h1>
+
+          <p class="about">
+
+          <ul class="list-group list-group-flush">
+
+
+            <li class="list-group-item">
+              <strong>Rating: </strong>
+              <%=user.rating%>/5
+            </li>
+            <li class="list-group-item">
+              <strong>SEX:</strong>
+              <%=user.sex%>
+            </li>
+
+            <li class="list-group-item">
+              <strong>Speciality: </strong>
+              <%=user.speciality%>
+            </li>
+            <li class="list-group-item">
+              <strong>Years of Practice: </strong>
+              <%=user.yearsOfPractice%>
+            </li>
+          </ul>
+          </p>
+
+
+          <a href="/Pdashboard/viewprofile/<%= user._id %>" class="btn">View Profile</a>
+          <a href="/Pdashboard/makeAnAppoitment/<%= user._id %>" class="btn">Make an Appointment</a>
+
+        </div>
+
+        <% })%>
+          <%}%>
+
+</body>
+
+</html>

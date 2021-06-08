@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>RGS HEALTH CARE</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/css/styleP.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet" />
+
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Font Awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <div class="top__container">
+    <img id="profile-pic" src="data:image/<%=user.photo.contentType%>;base64,<%=user.photo.data.toString('base64')%>"
+      alt="mypic">
+    <span class="welcome">Welcome! <%= user.name %> </span>
+    <span class="welcome">
+      <a href="/Pdashboard/PeditProfile" title="Edit your profile"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+          height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+          <path
+            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+          <path fill-rule="evenodd"
+            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+        </svg>
+      </a>
+    </span>
+
+  </div>
+
+  <div id="final-nav">
+    <div id="brand">
+      <a class="navbar-brand" href="/">
+        <!-- <span><img id="RGSlogo" src="/assets/RGSlogo.png" alt="Logo"> </span> -->
+        RGS
+      </a>
+    </div>
+
+    <div style="float: left;">
+      <a href="/myRecordsP" class="" id="dashboard">My records</a>
+      <a href="/Pdashboard/PmyAppointments" class="" id="dashboard"> My Appointments</a>
+    </div>
+
+    <form action="/Pdashboard" method="POST">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+
+          <select name="category" class="custom-select" id="inputGroupSelect01">
+            <option value="speciality">Speciality</option>
+            <option value="name">Name</option>
+          </select>
+          <div class="myinput">
+            <input class="form-control me-2" name="search" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"
+                aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <a href="/users/logout" class="" id="dashboard">Logout</a>
+
+  </div>
+
+  <!-- Header -->
+  <div class="Mycontainer">
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>General Instructions</h1>
+          <h5 class="w3-padding-32">
+            We wishes you a comfortable stay in the premises and a speedy recovery.
+            Kindly follow the rules and help us in providing efficient Services
+          </h5>
+
+          <p class="w3-text-grey">
+            • TOBACCO - All Tobacco products are strictly prohibited (Smoking, Chewing, Pan / Pan Masala) in the
+            premises.
+            <br>• FOOD AND BEVERAGES - No food or beverages are allowed in the premises as it may litter.
+            <br>• DONT HESITATE - Tell your problem openly because then only doctor can diagnose the symptoms. The
+            information shared is kept confidential and secured.
+            <br>• TREATMENT - Doctor will call you according to your appointment. Do not make chaos as it can effect
+            others.
+            <br>• KEEP QUITE - Be silent and take vaccant seat. Don't disturb others.
+            <br>• OFFER SEAT TO OLD PEOPLE AND WOMEN.
+
+          </p>
+        </div>
+
+        <div class="w3-third w3-center">
+          <!-- <i class="fa fa-anchor w3-padding-64"></i> -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfo0w4REC5HbJ-5YkfLDHinLOzxeh2sG47hw&usqp=CAU"
+            alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Grid -->
+
+  </div>
+  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: <%= quote.quotes %>
+    </h1>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <p>
+      Powered by
+      <a href="#" target="_blank">RGS Health Care</a>
+    </p>
+    <br>
+    <a href="/About-us">About Us</a>
+    <p>
+      <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit' }).format(new Date()) %>
+    </p>
+    <div id="clock"></div>
+  </footer>
+  </footer>
+
+</body>
+
+</html>

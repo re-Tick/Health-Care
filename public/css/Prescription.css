@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+
+  .about-section {
+    padding: 2%;
+    font-size: 1rem;
+    text-align: center;
+    background: #360033;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0b8793, #360033);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .container::after,
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .title {
+    color: grey;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background: #360033;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  .button:hover {
+    background-color: rgba(89, 7, 92, 0.829);
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(4, 30, 59, 0.5);
+    background: #1e003610;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0b8793, #360033);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0b8793, #360033);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 7rem;
+    color: white;
+    text-align: center;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+
+  .Mycontainer {
+    padding: 3%;
+    margin: 4rem 20%;
+    text-align: center;
+    background: #00d2ff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #609ff7, #00d2ff);
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(80, 78, 78);
+  }
+
+  #quote {
+    font-family: "Hachi Maru Pop", cursive;
+  }
+
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .container-lg {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .container-md {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .container-sm {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .container-xl {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .container-xxl {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .social-icon {
+    color: rgb(4, 28, 36);
+    margin: 10px 20px;
+    margin-bottom: 10px;
+  }
+
+  .social-icon:hover {
+    color: rgb(220, 235, 240);
+    cursor: pointer;
+  }
+
+  #heading {
+    font-size: 2rem;
+  }

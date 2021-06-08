@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/register.css" type="text/css">
+</head>
+
+<body>
+    <div class="container register">
+        <div class="row">
+
+            <div class="col-md-9 register-right">
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Fill your details</h3>
+                        <% include ./partials/messages %>
+                            <form action="/users/Patient/register" method="POST" enctype="multipart/form-data">
+                                <div class="row register-form">
+
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+                                            <label for="name">Full Name</label>
+                                            <input type="text" required class="form-control" name="name" id="name "
+                                                value="<%= typeof name != 'undefined' ? name : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Your Address</label>
+                                            <input type="text" required class="form-control" name="address" id="address"
+                                                value="<%= typeof address != 'undefined' ? address : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Username</label>
+                                            <input type="email" required class="form-control" name="email" id="email"
+                                                value="<%= typeof email != 'undefined' ? email : '' %>" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="">Gender</label>
+                                            <div class="maxl">
+                                                <label class="radio inline">
+                                                    <input type="radio" name="sex" value="male" checked>
+                                                    <span> Male </span>
+                                                </label>
+                                                <label class="radio inline x">
+                                                    <input type="radio" name="sex" value="female">
+                                                    <span>Female </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="dob">Date of Birth</label>
+                                            <input type="date" required class="form-control" name="dateOfBirth" id="dob"
+                                                value="<%= typeof dateOfBirth != 'undefined' ? dateOfBirth : '' %>" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="text" minlength="10" required maxlength="10" name="phone"
+                                                class="form-control" id="phone"
+                                                value="<%= typeof phone != 'undefined' ? phone : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" required class="form-control" id="password"
+                                                name="password" id="password"
+                                                value="<%= typeof password != 'undefined' ? password : '' %>" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="password2">Confirm Password</label>
+                                            <input type="password" required class="form-control" id="password2"
+                                                name="password2" id="password2"
+                                                value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="file">Upload your profile picture</label>
+
+                                        <p><input class="fsize" type="file" accept="image/png,image/jpeg,image/jpg" id="file" required
+                                                name="photo" onchange="loadFile(event)"></p>
+                                        <p><label for="file" style="cursor: pointer;"></label>
+                                        </p>
+                                        <p><img id="output" width="200" /></p>
+                                    </div>
+
+
+
+                                    <div class="col-md-6">
+                                        <label>Emergency Contact Details </label>
+                                        <div class="form-group">
+                                            <label for="Enter Name *">Name</label>
+                                            <input type="text" required class="form-control" name="emergencyName"
+                                                id="Enter Name *"
+                                                value="<%= typeof emergencyName != 'undefined' ? emergencyName : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Phonenumber">Phone Number</label>
+                                            <input type="text" minlength="10" required maxlength="10"
+                                                name="emergencyPhone" class="form-control" id="Phonenumber"
+                                                value="<%= typeof emergencyPhone != 'undefined' ? emergencyPhone : '' %>" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>. </label>
+                                        <div class="form-group">
+                                            <label for="EmergencyAddress">Address</label>
+                                            <input type="text" required class="form-control" name="emergencyAddress"
+                                                id="EmergencyAddress"
+                                                value="<%= typeof emergencyAddress != 'undefined' ? emergencyAddress : '' %>" />
+                                        </div>
+                                        <button type="submit" class="btnRegister">Register</button>
+
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/RegisterforPatient.js">
+
+    </script>
+    
+</body>
+
+</html>

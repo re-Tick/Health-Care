@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Yusei+Magic&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Hachi+Maru+Pop&family=Yusei+Magic&display=swap"
+    rel="stylesheet" />
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/Prescription.css">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script src="js/Prescription.js"></script>
+  
+</head>
+
+<body>
+  <div class="about-section">
+    <h1 id="heading">Prescriptions Page </h1>
+    <p id="quote">Serving Mankind is serving god...</p>
+  </div>
+  <div class="Mycontainer">
+    <form action="/Ddashboard/DmyAppointments/Prescription/<%=appid%>" method="POST" enctype="multipart/form-data">
+      <label for="photo">Upload Prescription</label>
+
+      <p>
+        <input style="cursor:pointer;" class="button fsize" type="file" accept="image/png,image/jpeg,image/jpg"
+          id="file" required name="photo" onchange="loadFile(event)" />
+      </p>
+
+      <p><label for="file"></label></p>
+      <p><img id="output" width="200" /></p>
+
+      <button class="btn btn-dark" style="cursor:pointer;" type="submit">send file</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2021</p>
+      <p id="date-time">
+        <span id="clock" style="color: rgb(255, 255, 255);"> </span>
+        <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit' }).format(new Date()) %>
+      </p>
+    </div>
+  </footer>
+  
+</body>
+
+</html>

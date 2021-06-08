@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>RGS HEALTH CARE</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/css/styleD.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
+<!-- CSS Stylesheets -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Font Awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="top__container">
+    <img id="profile-pic" src="data:image/<%=user.photo.contentType%>;base64,<%=user.photo.data.toString('base64')%>"
+      alt="mypic">
+    <span class="welcome">Welcome ! Dr. <%= user.name %> </span>
+    <span class="welcome">
+      <a href="/Ddashboard/DeditProfile" title="Edit your profile"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+          height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+          <path
+            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+          <path fill-rule="evenodd"
+            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+        </svg>
+      </a>
+      <p style="color: rgba(3, 39, 46, 0.658);"> <i> Speciality : <%=user.speciality%>.</i> </p>
+    </span>
+  </div>
+
+  <div id="final-nav">
+    <div id="brand">
+      <a class="navbar-brand" href="/">
+        <span><img id="RGSlogo" src="/assets/RGSlogo.png" alt="Logo"> </span>
+        RGS
+      </a>
+    </div>
+    <a href="/myRecords" class="Anchor">My records</a>
+    <a href="/Ddashboard/DmyAppointments" class="Anchor"> Appointments</a>
+
+    <form action="/Ddashboard" method="POST">
+
+    </form>
+    <a href="/users/logout" class="Anchor">Logout</a>
+  </div>
+
+
+  <!-- it will be active in mobile size
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   -->
+
+
+  <!-- Header -->
+  <div class="Mycontainer">
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container mycustom">
+      <div class="w3-content">
+        <div class="w3-twothird">
+          <h1>Doctor-Patient Relationship</h1>
+          <h5 class="w3-padding-32">
+            This relationship is formed when a doctor attends to a patient's medical needs and is usually through
+            consent. This unique relationship is built on trust, respect, communication, and a common understanding of
+            both the doctor and patients' sides.
+          </h5>
+
+          <p class="w3-text-grey">
+            Lifestyle factors can go a long way toward helping to prevent chronic disease and maintaining good health.
+            Rather than taking a negative approach to prevention, highlight the benefits of losing weight, changing
+            dietary habits and increasing physical activity. Listen to patients' fears and concerns and then address
+            them in a positive way.
+          </p>
+        </div>
+
+        <div class="w3-third w3-center">
+          <!-- <i class="fa fa-anchor w3-padding-64"></i> -->
+          <img class="grid-img"
+            src="data:image/jpeg;base64,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"
+            alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+      <div class="w3-content">
+        <div class="w3-third w3-center mycustom">
+          <!-- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i> -->
+          <img class="grid-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoabOpr2WmVDLZ2l-pIgPjFzFLvJMXGX8HSw&usqp=CAU"
+            alt="" />
+        </div>
+
+        <div class="w3-twothird">
+          <h1>Use of technology in Medical Fields </h1>
+          <h5 class="w3-padding-32">
+            The healthcare industry today is not what it was just five years ago. This is largely due to technology and
+            a large number of innovative digital solutions that are introduced every day. Many technological solutions
+            have been proposed for several problems that the world of medicine was facing, and these have greatly
+            changed and improved the medicine industry.
+          </h5>
+
+          <p class="w3-text-grey">
+           <h3> Some of them are :</h3>
+            <ul id="list">
+            <li>
+              3D Printing
+            </li>
+            <li>
+              Big Data
+            </li>
+            <li>
+              Improved Care and Efficiency
+            </li>
+            <li>
+              Remote Monitoring
+            </li>
+            <li>
+              Medical Experimentation
+            </li>
+          </ul>
+          </p>
+        </div>
+      
+      
+      </div>
+    </div>
+  </div>
+  <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: <%= quote.quotes %>
+    </h1>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <p>
+      Powered by
+      <a href="#" target="_blank">RGS Health Care</a>
+    </p>
+    <br>
+    <a href="/About-us">About Us</a>
+    <p>
+      <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit' }).format(new Date()) %>
+    </p>
+    <div id="clock"></div>
+  </footer>
+  </footer>
+
+</body>
+
+</html>

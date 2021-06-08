@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Yusei+Magic&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Hachi+Maru+Pop&family=Yusei+Magic&display=swap"
+    rel="stylesheet" />
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script src="js/Rate.js"></script>
+  <link rel="stylesheet" href="css/Rate.css">
+  
+</head>
+
+<body >
+  <div class="about-section">
+    <h1 id="heading">Rating Page </h1>
+    <p id="quote">Serving Mankind is serving god...</p>
+  </div>
+  <div class="Mycontainer">
+    <form action="/Pdashboard/rateDoctor/<%= doctor._id %>/<%= appid %>" method="POST" >
+      <p><strong > Rate Dr.<%= doctor.name %></strong></p>
+
+      <div class="Rate">
+          <h5>Rating according to current experience:</h5>
+          
+        <input type="radio" name="rating" id="1" value="1"/> <label for="1">1</label>   
+        <input type="radio" name="rating" id="2" value="2"/>  <label for="2">2</label> 
+        <input type="radio" name="rating" id="3" value="3"/>  <label for="3">3</label> 
+        <input type="radio" name="rating" id="4" value="4"/>  <label for="4">4</label> 
+        <input type="radio" name="rating" id="5" value="5"/>  <label for="5">5</label> 
+      </div>
+      <div style="padding-top: 2rem;">
+          <button class="btn btn-dark" style="cursor:pointer;" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2021</p>
+      <p id="date-time">
+        <span id="clock" style="color: rgb(255, 255, 255);"> </span>
+        <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit' }).format(new Date()) %>
+      </p>
+    </div>
+  </footer>
+  <script>
+    var loadFile = function (event) {
+      var image = document.getElementById("output");
+      image.src = URL.createObjectURL(event.target.files[0]);
+    };
+  </script>
+</body>
+
+</html>

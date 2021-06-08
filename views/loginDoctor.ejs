@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Login</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" type="text/css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+  <div class="card">
+  <form action="/users/Doctor/login" method="POST">
+    <a href="/">
+    <img class="mb-4" src="/assets/RGSlogo.png" alt="" width="72" height="57" style="border:1px solid #fafafa;">
+  </a>
+    <h1 class="h3 mb-3 fw-normal">LOGIN</h1>
+    <% include ./partials/messages %>
+    <label for="inputEmail" class="visually-hidden">Email address</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="visually-hidden">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+      
+      <a href="/users/Doctor/register"> Register here</a>
+    </div>
+    
+    <button  type="submit" class="btnRegister">Sign in</button>
+    
+  </form>
+  </div>
+</main>
+
+
+    
+  </body>
+</html>

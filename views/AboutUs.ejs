@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Static Template</title>
+  <link rel="stylesheet" href="css/aboutUs.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Yusei+Magic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Hachi+Maru+Pop&family=Yusei+Magic&display=swap"
+    rel="stylesheet">
+  <script src="js/aboutUs.js"></script>
+  
+  
+</head>
+
+<body onload="startTime()">
+  <div class="about-section">
+    <h1>Know about Us</h1>
+    <p id="quote">The five best doctors – Air, Water, Exercise, Diet and Rest</p>
+  </div>
+  <div class="Mycontainer">
+    <p>
+      At RGS Healthcare we aim to bridge the gap between the Doctor and Patients. To provide the Patients with a
+      seamless healthcare experience we have designed our site such that patients can choose the Doctors according to
+      their specializations and book appointments to receive hassle-free treatment. We are not only patient-oriented but
+      we have focussed on the Doctors also, they can register their profile having their complete details, thus saving
+      their advertisement cost.
+    </p>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2021</p>
+      <p id="date-time">
+        <span id="clock" style="color: rgb(255, 255, 255);"> </span>
+        <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit' }).format(new Date()) %>
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/register.css" type="text/css">
+</head>
+
+<body>
+    <div class="container register">
+        <div class="row">
+            <!-- <div class="col-md-3 register-left">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                <h3>Welcome</h3>
+                <p>We are here to help you</p>
+
+            </div> -->
+            <div class="col-md-9 register-right">
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Fill your details</h3>
+                        <% include ./partials/messages %>
+                            <form action="/users/Doctor/register" method="POST" enctype="multipart/form-data">
+                                <div class="row register-form">
+
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+                                            <label for="fname">Full Name</label>
+                                            <input type="text" required class="form-control" name="name" id="fname"
+                                                value="<%= typeof name != 'undefined' ? name : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Address">Residential Address</label>
+                                            <input type="text" required class="form-control" name="address"
+                                                id="Address "
+                                                value="<%= typeof address != 'undefined' ? address : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="MedicalSchoolAttended">Medical School Attended</label>
+                                            <input type="text" required class="form-control" name="medicalSchool"
+                                                id="MedicalSchoolAttended "
+                                                value="<%= typeof medicalSchool != 'undefined' ? medicalSchool : '' %>" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ClinicAddress">Clinic Address</label>
+                                            <input type="text" required class="form-control" name="clinicAddress"
+                                                id="ClinicAddress "
+                                                value="<%= typeof clinicAddress != 'undefined' ? clinicAddress : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Language">Language</label>
+                                            <input type="text" required class="form-control" name="language"
+                                                id="Language "
+                                                value="<%= typeof language != 'undefined' ? language : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Email">Enter your email address</label>
+                                            <input type="email" required class="form-control" name="email" id=" Email "
+                                                value="<%= typeof email != 'undefined' ? email : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Password">Enter Password</label>
+                                            <input type="password" required class="form-control" id="password"
+                                                name="password" id="Password "
+                                                value="<%= typeof password != 'undefined' ? password : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ConfirmPassword">Confirm Password</label>
+                                            <input type="password" required class="form-control" id="confirm_password"
+                                                name="password2" id="ConfirmPassword "
+                                                value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="DateOfBirth">Date Of Birth</label>
+                                            <input type="date" required class="form-control" name="dateOfBirth"
+                                                id="DateOfBirth "
+                                                value="<%= typeof dateOfBirth != 'undefined' ? dateOfBirth : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="YearsOfPractice">Years Of Practice</label>
+                                            <input type="text" required class="form-control" name="yearsOfPractice"
+                                                id="YearsOfPractice "
+                                                value="<%= typeof yearsOfPractice != 'undefined' ? yearsOfPractice : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Speciality">Speciality</label>
+                                            <input type="text" required class="form-control" name="speciality"
+                                                id="Speciality "
+                                                value="<%= typeof speciality != 'undefined' ? speciality : '' %>" />
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <input type="text" required class="form-control" name="clinicTiming"
+                                                placeholder="Clinic Timings *"
+                                                value="<%= typeof clinicTiming != 'undefined' ? clinicTiming : '' %>" /> -->
+                                            <p>Choose your clinic timings</p>
+                                            <label for="st">From</label>
+                                            <input type="time" id="st" name="startTime" required>
+                                            <label for="et">To</label>
+                                            <input type="time" id="et" name="endTime" required>
+
+
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="YourPhone">Mobile No</label>
+                                            <input type="text" minlength="10" required maxlength="10" name="phone"
+                                                class="form-control" id="YourPhone "
+                                                value="<%= typeof phone != 'undefined' ? phone : '' %>" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ConsultancyFees">Consultancy Fees</label>
+                                            <input type="text" name="consultancyFees" class="form-control"
+                                                id="ConsultancyFees "
+                                                value="<%= typeof  consultancyFees != 'undefined' ?  consultancyFees : '' %>" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label>
+                                            <div id="gender" class="maxl">
+                                                <label class="radio inline">
+                                                    <input type="radio" name="sex" value="male" checked>
+                                                    <span> Male </span>
+                                                </label>
+                                                <label class="radio inline x">
+                                                    <input type="radio" name="sex" value="female">
+                                                    <span>Female </span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="photo">Upload your profile picture</label>
+
+                                            <p><input class="fsize" type="file" accept="image/png,image/jpeg,image/jpg" id="file"
+                                                    required name="photo" onchange="loadFile(event)"></p>
+                                            <p><label for="file" style="cursor: pointer;"></label>
+                                            </p>
+                                            <p><img id="output" width="200" /></p>
+                                        </div>
+                                        <button type="submit" class="btnRegister">Register</button>
+                                    </div>
+
+
+
+                                </div>
+                            </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/RegisterforDoctor.js">    </script>
+    
+</body>
+
+</html>

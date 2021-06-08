@@ -1,0 +1,13 @@
+body {
+    background: linear-gradient(to right, #dbf6fd, #8bfbffe5);
+    
+  }
+
+  .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 7.25rem;
+    border-radius: 10px;
+    margin: 3%;
+  }

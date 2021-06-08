@@ -1,0 +1,17 @@
+@media (min-width: 1024px) {
+    .lg\:my-0 {
+      margin-top: 74px;
+      margin-bottom: 0;
+    }
+  }
+
+  select#inputGroupSelect01 {
+    margin: 4px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+  #heading {
+    font-family: 'Hachi Maru Pop', cursive;
+    color: #071d2cec;
+  }

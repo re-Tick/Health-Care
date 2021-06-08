@@ -1,0 +1,246 @@
+.myclass {
+  background: #9ddfd3;
+}
+
+.Logout {
+  float: right;
+}
+
+#myheader {
+  background: #dbf6e9;
+  float: left;
+  width: 300px;
+  display: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libre+Baskerville:ital@1&display=swap");
+.myheading {
+  font-family: "Indie Flower", cursive;
+  font-family: "Libre Baskerville", serif;
+  color: #0f4c75;
+}
+#user-image {
+  border-radius: 3%;
+  border: 2px solid #0f4c75;
+}
+
+.Mycontainer {
+  margin: 3px;
+  background: #f1f9f9;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgba(59, 58, 58, 0.856);
+}
+header {
+  border: 2px solid #0f4c75;
+  border-radius: 50px;
+  margin: 4px;
+  margin-top: 40px;
+}
+
+.myinput {
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  margin-bottom: 0;
+}
+
+.Grid {
+  margin-bottom: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#list{
+  font-size: 1.5rem;
+  background:  rgba(225, 251, 255, 0.842);
+}
+
+body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+  }
+
+  .w3-bar,
+  h1,
+  button {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .fa-anchor,
+  .fa-coffee {
+    font-size: 200px;
+  }
+
+  .custom-select {
+    width: 40%;
+  }
+
+  #final-nav {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #9ddfd3;
+    color: white;
+    /* margin-top: 15vh; */
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(59, 58, 58, 0.856);
+    padding: 1rem;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+
+  #brand a {
+    color: rgba(5, 30, 54, 0.801);
+  }
+
+  #brand a:hover {
+    color: rgb(241, 242, 243);
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .top__container {
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #1f4037;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c0fce0, #35554c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d2fae7, #4fb396);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 2rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(59, 58, 58, 0.856);
+  }
+
+  #profile-pic {
+    width: 15%;
+    margin: 4px;
+    margin-right: 2rem;
+    height: 8rem;
+    border-radius: 100%;
+  }
+
+  #RGSlogo {
+    margin: 4px;
+    width: 10%;
+    height: 2rem;
+    border-radius: 100%;
+  }
+
+  .welcome {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-family: 'Fraunces', serif;
+  }
+
+  .Anchor {
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+
+  .Anchor:hover {
+    color: rgba(13, 6, 51, 0.726);
+
+  }
+
+  body {
+    background-color: rgba(189, 255, 252, 0.774);
+  }
+
+  @media only screen and (max-width: 720px) {
+    #final-nav {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .top__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .grid-img {
+    width: 100%;
+    /* border-radius: 20%; */
+    box-shadow: 0.25rem 0.25rem 0.25rem rgba(85, 79, 79, 0.753);
+  }
+  .mycustom{
+    display: flex;
+    justify-content: space-between;
+  }
+  .w3-twothird {
+    padding: 2rem;
+    /* background:  rgba(225, 251, 255, 0.842); */
+    /* margin: 2px; */
+  }
+  body {
+    margin-top: 13vh;
+    background: rgba(167, 241, 235, 0.55);
+    background: #2980B9;
+    background: #50C9C3;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96DEDA, #50C9C3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.icons-list {
+    list-style-type: none;
+}
+
+.container {
+    background: #dbf6e9;
+    box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.329);
+    text-align: center;
+    border-radius: 7px;
+}
+
+.thumbnail img {
+    vertical-align: middle;
+    border-style: none;
+    height: 200px;
+    border-radius: 50%;
+    margin: 7px;
+    width: 100%;
+}
+
+.col-md-4.col-sm-5 {
+    padding-bottom: 14px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 0;
+}
+
+#heading {
+    color: #2B32B2;
+}
+.capitalize{
+    text-transform: capitalize;
+}

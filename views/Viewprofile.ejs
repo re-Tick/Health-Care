@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Care</title>
+    <link rel="stylesheet" href="css/styleD.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet" />
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/Viewprofile.js"></script>
+    
+</head>
+
+<body onload="startTime()">
+    <h2 id="heading">RGS HEALTH CARE</h2>
+    <div class="container bootstrap snippets bootdey">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4 col-sm-5">
+                    <div class="thumbnail">
+                        <img src="data:image/<%=doctor[0].photo.contentType%>;base64,<%=doctor[0].photo.data.toString('base64')%>"
+                            alt="Profile Picture" />
+                    </div>
+                    <!-- /.thumbnail -->
+                    <br />
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-asterisk"></i> &nbsp;Successful Appointments: <%= doctor[0].numberOfAppoints %>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-hourglass-end" aria-hidden="true"></i> &nbsp;Experiance:
+                            <%=doctor[0].yearsOfPractice%> years
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-graduation-cap"></i> &nbsp;Education : <%=doctor[0].medicalSchool%>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-address-book" aria-hidden="true"></i>
+                            &nbsp;phone number : <%=doctor[0].phone%>
+                        </a>
+
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-star" aria-hidden="true"></i> &nbsp;Rating : <%= doctor[0].rating %>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-7">
+                    <h2 class="capitalize">Dr <%=doctor[0].name%>
+                    </h2>
+                    <h4>
+                        <%=doctor[0].speciality%>
+                    </h4>
+                    <hr />
+                    <p>
+                        <a href="/Pdashboard/makeAnAppoitment/<%=doctor[0]._id%>" class="btn btn-success">Make an
+                            Appontment</a>
+                        &nbsp;&nbsp;
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"
+                            class="btn btn-info">Send an Email</a>
+                    </p>
+                    <hr />
+                    <ul class="icons-list">
+                        <li><i class="icon-li fa fa-envelope"></i>
+                            <%=doctor[0].email%>
+                        </li>
+                        <li>
+                            <i class="icon-li fa fa-map-marker"></i>
+                            <%=doctor[0].clinicAddress%>
+                        </li>
+                        <li>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <%=doctor[0].clinicTiming.Start%> - <%=doctor[0].clinicTiming.End%>
+                        </li>
+                    </ul>
+                    <br />
+                    <p>
+                        <%if(doctor[0].sex=='male' ){%>
+                            <span>He</span>
+                            <%}%>
+                                <%if(doctor[0].sex=='female' ){%>
+                                    <span>She</span>
+                                    <%}%>
+                                        is a great <%=doctor[0].speciality%> treating people for last
+                                            <%=doctor[0].yearsOfPractice%> years.
+                                                <%if(doctor[0].sex=='male' ){%>
+                                                    <span>He</span>
+                                                    <%}%>
+                                                        <%if(doctor[0].sex=='female' ){%>
+                                                            <span>She</span>
+                                                            <%}%>
+                                                                has competed
+                                                                <%if(doctor[0].sex=='male' ){%>
+                                                                    <span>his</span>
+                                                                    <%}%>
+                                                                        <%if(doctor[0].sex=='female' ){%>
+                                                                            <span>her</span>
+                                                                            <%}%>
+                                                                                graduation from
+                                                                                <%=doctor[0].medicalSchool%> .
+
+                    </p>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
